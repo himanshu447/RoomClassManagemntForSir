@@ -22,21 +22,21 @@ class StudentRespositery(application: Application) {
     }
 
     fun insert(student: Student) {
-        insertStudentAscy(studentDOA!!).execute(student)
+        InsertStudentAscy(studentDOA!!).execute(student)
     }
 
 
     fun updateStudent(sid: Int, name: String) {
         sid12 = sid
         sname = name
-        updateStudentAscy(studentDOA!!).execute(name)
+        UpdateStudentAscy(studentDOA!!).execute(name)
     }
 
     fun deleteStudent(sid: Int) {
         DeleteStudentAsy(studentDOA!!).execute(sid)
     }
 
-    inner class updateStudentAscy(studentDOA: StudentDOA) : AsyncTask<String, Void, Void>() {
+    inner class UpdateStudentAscy(studentDOA: StudentDOA) : AsyncTask<String, Void, Void>() {
 
         val asydoa: StudentDOA = studentDOA
 
@@ -56,7 +56,7 @@ class StudentRespositery(application: Application) {
         }
     }
 
-    class insertStudentAscy(studentDOA: StudentDOA) : AsyncTask<Student, Void, Void>() {
+    class InsertStudentAscy(studentDOA: StudentDOA) : AsyncTask<Student, Void, Void>() {
 
         val asydoa: StudentDOA = studentDOA
 

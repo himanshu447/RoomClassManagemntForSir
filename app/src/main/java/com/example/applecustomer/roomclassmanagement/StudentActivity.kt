@@ -21,7 +21,9 @@ import com.example.applecustomer.roomclassmanagement.student.Student
 
 import kotlinx.android.synthetic.main.activity_add_new_student.*
 
+private val TAG = StudentActivity::class.java.simpleName
 private const val REQUEST_CODE_FOR_STUDENT = 1
+private val DIALOG_TAG = "$TAG.DIALOG_TAG"
 
 class StudentActivity : AppCompatActivity(), updateDialg.CallBack {
 
@@ -38,7 +40,7 @@ class StudentActivity : AppCompatActivity(), updateDialg.CallBack {
         setSupportActionBar(toolbar)
 
         cid = intent.getIntExtra("cid", 0)
-        Log.e("tag", "in cid is $cid")
+
 
         val recy = findViewById<RecyclerView>(R.id.recyclerStudent)
         val adapater = StudentAdapter(this)
@@ -88,7 +90,7 @@ class StudentActivity : AppCompatActivity(), updateDialg.CallBack {
         fun bindData(student: Student) {
             itemView.setOnClickListener {
                 val dialg = updateDialg.newInstance(student.name, student.sid)
-                dialg.show(fragment, "TAG")
+                dialg.show(fragment, DIALOG_TAG)
             }
             sname.text = student.name
         }
