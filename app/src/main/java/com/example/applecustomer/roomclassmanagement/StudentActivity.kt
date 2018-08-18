@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.applecustomer.roomclassmanagement.classes.ClassesViewModel
+import com.example.applecustomer.roomclassmanagement.dialog.updateDialg
 import com.example.applecustomer.roomclassmanagement.student.Student
 
 import kotlinx.android.synthetic.main.activity_add_new_student.*

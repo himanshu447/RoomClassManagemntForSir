@@ -1,4 +1,4 @@
-package com.example.applecustomer.roomclassmanagement
+package com.example.applecustomer.roomclassmanagement.dialog
 
 import android.app.Dialog
 import android.content.Context
@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.ImageButton
+import com.example.applecustomer.roomclassmanagement.R
 
 class updateDialg : DialogFragment() {
 
